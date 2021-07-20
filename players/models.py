@@ -8,4 +8,4 @@ class Player(models.Model):
     age = models.PositiveSmallIntegerField()
     description = models.TextField()
     nationality = models.CharField(max_length=100)
-    image = models.FilePathField(path='/players/img')
+    image = models.CharField(max_length=100)
