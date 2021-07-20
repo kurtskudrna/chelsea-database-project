@@ -1,6 +1,8 @@
 from django.shortcuts import render
+from players.models import Player
 # Create your views here.
 
 
 def all_players(request):
-    return render(request, 'players/index.html')
+    players = Player.objects.all()
+    return render(request, 'players/all_players.html', {'players': players})
